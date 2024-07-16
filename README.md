@@ -1,4 +1,4 @@
-# Podcast Transcriber using OpenAI API, Whisper API and Google Bigquery
+# Podcast Transcriber using OpenAI GPT-4, Whisper API and Google Bigquery
 
 This Jupyter notebook script automates the process of downloading, transcribing, and analyzing podcast episodes. 
 It uses OpenAI's Whisper for transcription, GPT-4 for content analysis, and stores the results in Google BigQuery.
