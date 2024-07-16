@@ -1,3 +1,5 @@
+pip install functions-framework==3.* requests==2.* pandas==1.* feedparser==6.* pydub==0.* openai==1.*
+
 import requests
 import pandas as pd
 import feedparser
