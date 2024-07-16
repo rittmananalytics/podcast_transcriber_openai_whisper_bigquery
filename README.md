@@ -50,10 +50,13 @@ Before running the notebook, you need to configure the following:
 3. BigQuery Dataset and Table:
    Set the `dataset_name` and `table_name` variables to your desired values.
 
-4. Podcast RSS Feed:
+4. Podcast Host Name:
+   Set the `podcast_host_name` to the desired host of the podcast.
+
+6. Podcast RSS Feed:
    Set the `feed_url` variable to the RSS feed URL of the podcast you want to process.
 
-5. Number of Episodes:
+7. Number of Episodes:
    Set the `num_episodes` variable to the number of recent episodes you want to process.
 
 ## How It Works
