@@ -1,4 +1,4 @@
-# Podcast Transcriber using OpenAI GPT-4, Whisper API and Google Bigquery
+# Podcast Transcription 
 
 This Jupyter notebook script automates the process of downloading, transcribing, and analyzing podcast episodes. 
 It uses OpenAI's Whisper for transcription, GPT-4 for content analysis, and stores the results in Google BigQuery.
@@ -98,6 +98,77 @@ The script creates a BigQuery table with the following columns:
 - Ensure you have appropriate permissions and comply with the terms of service for all APIs and services used.
 - The script currently does not handle pagination for RSS feeds with a large number of episodes.
 
-## Contributing
+# Podcast Transcriber
 
-Feel free to fork this repository and submit pull requests with any enhancements
+This Jupyter notebook generates simulated podcast conversations about data analytics, business intelligence, and modern data stack technologies. It uses OpenAI's GPT-4 model to create realistic discussions between a host and various guests, based on profiles generated from actual podcast transcripts.
+
+## Features
+
+- Retrieves podcast data from a BigQuery table
+- Identifies guests from podcast episode titles
+- Generates detailed guest profiles using GPT-4
+- Creates diverse discussion topics related to data analytics
+- Simulates conversations between the host and selected guests
+- Stores guest profiles and simulated conversations in BigQuery tables
+- Outputs conversations in both JSON and HTML formats
+
+## Prerequisites
+
+- Google Cloud Platform account with BigQuery enabled
+- OpenAI API key
+- Python 3.7+
+
+## Required Libraries
+
+- google-cloud-bigquery
+- pandas
+- openai
+- json
+- random
+
+## Setup
+
+1. Clone this repository to your local machine or Google Colab environment.
+2. Install the required libraries:
+pip install google-cloud-bigquery pandas openai
+Copy3. Set up your Google Cloud credentials and OpenAI API key as environment variables or update the placeholders in the notebook.
+4. Update the BigQuery project ID, dataset name, and table names in the notebook to match your GCP setup.
+
+## Usage
+
+1. Run the notebook cells in order.
+2. The script will:
+- Create necessary BigQuery tables if they don't exist
+- Retrieve podcast data from the specified BigQuery table
+- Identify guests and generate their profiles
+- Generate 10 diverse discussion topics
+- Simulate conversations for each topic
+- Store the results in BigQuery tables
+
+## BigQuery Table Schemas
+
+### Guest Profiles Table
+
+- `guest_name` (STRING): Name of the guest
+- `profile` (STRING): JSON string containing the guest's profile
+
+### Simulated Conversations Table
+
+- `topic` (STRING): The discussion topic
+- `guests` (STRING): JSON array of guest names
+- `guest_profiles` (STRING): JSON object containing profiles of participating guests
+- `conversation` (STRING): JSON array of the simulated conversation
+- `html_conversation` (STRING): HTML-formatted version of the conversation
+
+## Customization
+
+- Adjust the number of simulated conversations by changing the range in the main execution loop.
+- Modify the `generate_topic` function to focus on specific areas of interest.
+- Tweak the `select_relevant_guests` function to change how guests are selected for each conversation.
+
+## Notes
+
+- The quality and diversity of the simulated conversations depend on the input data and the performance of the GPT-4 model.
+- Be mindful of API usage costs when running this notebook, especially when generating a large number of conversations.
+- Ensure compliance with OpenAI's use-case policies and your organization's data handling guidelines.
+
